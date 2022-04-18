@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Damage tables</title>
+</head>
+<link rel="icon" href="/Images/warcraft_icon.ico" />
+
+<!-- текст по центру -->
+<style>
+    .text_center {
+        text-align: center;
+    }
+</style>
+
+<!-- body -->
+<style>
+    body {
+        background-color: #f1ebe7;
+        color: #78473d;
+        background-image: url(images/background2.jpg);
+        background-attachment: fixed;
+        background-size: 100% auto;
+        background-blend-mode: overlay;
+    }
+</style>
+
+<!-- paragraph -->
+<style>
+    .paragraph_prop {
+        text-align: justify;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+</style>
+
+<!-- tables -->
+<style>
+    td,
+    th {
+        border: 1px solid #78473d;
+        empty-cells: hide;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-color: #78473d;
+        border-style: solid;
+        width: 300px;
+        height: 300px;
+        table-layout: auto;
+    }
+
+    caption {
+        caption-side: bottom;
+        margin: 5px;
+    }
+</style>
+
+
+<body>
+    <div class="paragraph_prop">
+        <p>
+        <table>
+            <caption>Chrome logo</caption>
+
+            <tbody>
+                <tr>
+                    <td colspan="2" bgcolor="red"></td>
+                    <td rowspan="2" bgcolor="yellow"></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2" bgcolor="yellow"></td>
+                    <td bgcolor="#33A0FE"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" bgcolor="#19CC43"></td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <br />
+        <button onclick="document.location='index.html'">На главную</button>
+        </p>
+    </div>
+</body>
+
+</html>

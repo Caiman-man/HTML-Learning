@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Damage tables</title>
+</head>
+<link rel="icon" href="/Images/warcraft_icon.ico" />
+
+<!-- текст по центру -->
+<style>
+  .text_center {
+    text-align: center;
+  }
+</style>
+
+<!-- body -->
+<style>
+  body {
+    background-color: #f1ebe7;
+    color: #78473d;
+    background-image: url(images/background2.jpg);
+    background-attachment: fixed;
+    background-size: 100% auto;
+    background-blend-mode: overlay;
+  }
+</style>
+
+<!-- paragraph -->
+<style>
+  .paragraph_prop {
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+</style>
+
+<!-- tables -->
+<style>
+  td,
+  th {
+    border: 1px solid #78473d;
+    empty-cells: hide;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-color: #78473d;
+    border-style: solid;
+    width: 100%;
+    height: auto;
+    table-layout: auto;
+  }
+
+  caption {
+    caption-side: bottom;
+    margin: 5px;
+  }
+</style>
+
+
+<body>
+  <div class="paragraph_prop">
+    <p>
+    <table>
+      <caption>Таблица урона героев по броне</caption>
+
+      <thead>
+        <tr>
+          <th>Броня/Атака</th>
+          <th>Без Брони</th>
+          <th>Легкая Броня</th>
+          <th>Средняя Броня</th>
+          <th>Тяжелая Броня</th>
+          <th>Броня Героев</th>
+          <th>Укрепленный Объект</th>
+          <th>Божественная броня</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td style="font: bold 100% serif;">Обычная</td>
+          <td>100%</td>
+          <td>100%</td>
+          <td>150%</td>
+          <td>100%</td>
+          <td>100%</td>
+          <td>70%</td>
+          <td>5%</td>
+        </tr>
+
+        <tr>
+          <td style="font: bold 100% serif;">Дальняя</td>
+          <td>150%</td>
+          <td>200%</td>
+          <td>75%</td>
+          <td>100%</td>
+          <td>50%</td>
+          <td>35%</td>
+          <td>5%</td>
+        </tr>
+
+        <tr>
+          <td style="font: bold 100% serif;">Осадная</td>
+          <td>150%</td>
+          <td>100%</td>
+          <td>50%</td>
+          <td>100%</td>
+          <td>50%</td>
+          <td>150%</td>
+          <td>5%</td>
+        </tr>
+
+        <tr>
+          <td style="font: bold 100% serif;">Магическая</td>
+          <td>100%</td>
+          <td>125%</td>
+          <td>75%</td>
+          <td>200%</td>
+          <td>50%</td>
+          <td>35%</td>
+          <td>5%</td>
+        </tr>
+
+        <tr>
+          <td style="font: bold 100% serif;">Хаос-Атака</td>
+          <td>100%</td>
+          <td>100%</td>
+          <td>100%</td>
+          <td>100%</td>
+          <td>100%</td>
+          <td>100%</td>
+          <td>100%</td>
+        </tr>
+
+        <tr>
+          <td style="font: bold 100% serif;">Заклинания</td>
+          <td>100%</td>
+          <td>100%</td>
+          <td>100%</td>
+          <td>100%</td>
+          <td>70%</td>
+          <td>100%</td>
+          <td>5%</td>
+        </tr>
+
+        <tr>
+          <td style="font: bold 100% serif;">Атака Героев</td>
+          <td>100%</td>
+          <td>100%</td>
+          <td>100%</td>
+          <td>100%</td>
+          <td>100%</td>
+          <td>50%</td>
+          <td>5%</td>
+        </tr>
+      </tbody>
+
+    </table>
+
+    <br />
+    Формула для расчета брони:
+    Снижение урона в процентах = 100 * (Кол-во брони * 0,06) / (1 + Кол-во брони * 0,06)<br />
+    Получившееся значение округлить до целого в большую сторону.<br /><br />
+    <strong>Размер снижения брони в процентах для некоторых значений:</strong>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Кол-во брони</th>
+          <th>Снижение урона</th>
+          <th>Кол-во брони</th>
+          <th>Снижение урона</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>6%</td>
+          <td>16</td>
+          <td>49%</td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>11%</td>
+          <td>17</td>
+          <td>50%</td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>15%</td>
+          <td>18</td>
+          <td>52%</td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td>19%</td>
+          <td>19</td>
+          <td>53%</td>
+        </tr>
+
+        <tr>
+          <td>5</td>
+          <td>23%</td>
+          <td>20</td>
+          <td>55%</td>
+        </tr>
+
+        <tr>
+          <td>6</td>
+          <td>26%</td>
+          <td>21</td>
+          <td>56%</td>
+        </tr>
+
+        <tr>
+          <td>7</td>
+          <td>30%</td>
+          <td>22</td>
+          <td>57%</td>
+        </tr>
+
+        <tr>
+          <td>8</td>
+          <td>32%</td>
+          <td>23</td>
+          <td>58%</td>
+        </tr>
+
+        <tr>
+          <td>9</td>
+          <td>35%</td>
+          <td>24</td>
+          <td>59%</td>
+        </tr>
+
+        <tr>
+          <td>10</td>
+          <td>38%</td>
+          <td>25</td>
+          <td>60%</td>
+        </tr>
+
+        <tr>
+          <td>11</td>
+          <td>40%</td>
+          <td>26</td>
+          <td>60.9%</td>
+        </tr>
+
+        <tr>
+          <td>12</td>
+          <td>42%</td>
+          <td>27</td>
+          <td>61.8%</td>
+        </tr>
+
+        <tr>
+          <td>13</td>
+          <td>44%</td>
+          <td>28</td>
+          <td>62.7%</td>
+        </tr>
+
+        <tr>
+          <td>14</td>
+          <td>46%</td>
+          <td>29</td>
+          <td>63.5%</td>
+        </tr>
+
+        <tr>
+          <td>15</td>
+          <td>47%</td>
+          <td>30</td>
+          <td>64.3%</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <br />
+    <button onclick="document.location='index.html'">На главную</button>
+    </p>
+  </div>
+</body>
+
+</html>

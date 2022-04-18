@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Журнал</title>
+
+    <style>
+        body {
+            background-color: #c6d1dc;
+            background-attachment: fixed;
+            background-size: 100% auto;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        .background-block-1 {
+            background: linear-gradient(#cdd1d6 0.1rem, #ffffff);
+            margin-top: 0px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .background-block-2 {
+            background-color: #ffffff;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .block-type-1 {
+            color: #4e5180;
+            font-size: 12px;
+            font-weight: bold;
+            border-bottom: 1px solid #A9AFB6;
+            padding-top: 15px;
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+        .block-type-2 {
+            background-color: #ffffff;
+            padding-top: 15px;
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+        .logo img {
+            width: 116px;
+            height: 61px;
+            float: left;
+            border-style: solid;
+            border-width: 0.5px;
+            border-color: #AFB6BF;
+            box-shadow: 1px 0.5px 0.5px 1px #d0d4d9;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div class="background-block-1">
+
+        <!-- first part -->
+        <div class="block-type-1">
+            <div class="logo">
+                <img src="Images/journal.png" alt="journal">
+            </div>
+
+            <div style="margin-left: 25px; width: auto; font-size: 12px; float: left;">
+                присутствующие<br>
+                посещаемость<br>
+                средний балл<br>
+                список студентов<br>
+            </div>
+
+            <div style="margin-left: 260px; width: auto; font-size: 12px;">
+                расписание<br>
+                отчитанные часы<br>
+                мои экзамены<br>
+                стр. регистрации<br>
+            </div>
+            <br><br>
+        </div>
+    </div>
+
+    <div class="background-block-2">
+
+        <!-- second part -->
+        <div class="block-type-2">
+            <div>
+                <label style="font-size: 12px; color: #52524e; float: left; margin-right: 20px;">
+                    < < < 27-12-2009 -- Воскресенье> > >
+                </label>
+                <input type="date" value="2009-12-27" style="height: 15px;" />
+                <input type="button" value="Перейти" style="margin-left: 10px;" />
+                <table style="float: right; font-size: 11px; font-weight: bold; color: #686498;">
+                    <tr>
+                        <td>0 лента</td>
+                        <td>1 лента</td>
+                        <td>2 лента</td>
+                        <td>3 лента</td>
+                        <td>4 лента</td>
+                    </tr>
+                    <tr>
+                        <td>5 лента</td>
+                        <td>6 лента</td>
+                        <td>7 лента</td>
+                        <td>8 лента</td>
+                        <td>9 лента</td>
+                    </tr>
+                </table>
+            </div>
+            <label style="font-weight: bold; font-size: 18px; color: #52524e;">
+                ЕКО-08-П11
+            </label>
+            <label style="font-style: italic; font-size: 12px; color: #52524e;">
+                (Windows Forms)
+            </label>
+            <label style="font-style: italic; font-size: 12px; color: #52524e; margin-left: 10px;">
+                Аудитория No "1"
+            </label>
+
+        </div>
+
+        <!-- third part -->
+        <div class="block-type-2" style="height: 110px;">
+            <div style="float: left; width: auto;">
+                <label style="font-size: 11px; font-weight: bold; color: #52524e; margin-right: 20px;">
+                    Отсутствовали на предыдущей ленте:
+                </label>
+
+                <table style="font-size: 11px; font-weight: bold; color: #7d8283; margin-top: 7px;">
+                    <tr>
+                        <td style="width: 80px;">Васильченко</td>
+                        <td><input type="text"
+                                style="height: 10px; width: 110px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Вилимец</td>
+                        <td><input type="text"
+                                style="height: 10px; width: 110px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Новиков</td>
+                        <td><input type="text"
+                                style="height: 10px; width: 110px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                        </td>
+                    </tr>
+                </table>
+                <input type="button" value="Записать" />
+            </div>
+
+            <div style="margin-left: 320px; width: auto;">
+                <label style="font-size: 11px; font-weight: bold; color: #52524e; margin-right: 20px;">
+                    Не допущены учебной частью:
+                </label>
+
+                <table style="font-size: 11px; font-weight: bold; color: #7d8283; margin-top: 7px;">
+                    <tr>
+                        <td style="width: 300px; color: red;">Ручка Анатолий Олегович</td>
+                    </tr>
+                    <tr>
+                        <td style="color: red;">Гаврилов Андрей Владимирович</td>
+                    </tr>
+                    <tr>
+                        <td style="color: red;">Денисов Алексей Анатольевич</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- fourth part (table) -->
+        <div class="block-type-2" style="padding-top: 0px;">
+            <table style="font-size: 11px; font-weight: bold; color: #52524e; border-spacing: 0px;">
+                <tr style="background-color: #efefef; border-color: #949494;">
+                    <th align="left" style="width: 42%; border: 1px solid #949494;">Студент</th>
+                    <th style="width: 13%; border: 1px solid #949494;">Отс./Был/Опоздал</th>
+                    <th style="width: 38%; border: 1px solid #949494;">Причина отсутствия на сегодня(27-12-2009, лента
+                        4)
+                    </th>
+                    <th style="width: 7%; border: 1px solid #949494;">Оценка</th>
+                    <th style="width: 1%; border: 1px solid #949494;"> </th>
+                </tr>
+
+                <tr style="background-color: #e0f0ff;">
+                    <td>1. Васильченко Филипп Александрович</td>
+                    <td align="center">
+                        <input type="radio" name="r1" checked value="отс" />
+                        <input type="radio" name="r1" value="был" />
+                        <input type="radio" name="r1" value="опоздал" />
+                    </td>
+                    <td align="center"><input type="text"
+                            style="height: 10px; width: 280px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                    </td>
+                    <td align="center"><input type="text"
+                            style="height: 10px; width: 50px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                    </td>
+                    <td>A</td>
+                </tr>
+
+                <tr style="background-color: #ffffff;">
+                    <td>2. Вилимец Антон Олегович</td>
+                    <td align="center">
+                        <input type="radio" name="r2" checked value="отс" />
+                        <input type="radio" name="r2" value="был" />
+                        <input type="radio" name="r2" value="опоздал" />
+                    </td>
+                    <td align="center"><input type="text"
+                            style="height: 10px; width: 280px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                    </td>
+                    <td align="center"><input type="text"
+                            style="height: 10px; width: 50px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                    </td>
+                    <td>A</td>
+                </tr>
+
+                <tr style="background-color: #e0f0ff;">
+                    <td style="color: red;">3. Гаврилов Андрей Владимирович</td>
+                    <td align="center">
+                        <input type="radio" name="r3" checked value="отс1" />
+                        <input type="radio" name="r3" value="был2" />
+                        <input type="radio" name="r3" value="опоздал3" />
+                    </td>
+                    <td align="center"><input type="text"
+                            style="height: 10px; width: 280px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                    </td>
+                    <td align="center"><input type="text"
+                            style="height: 10px; width: 50px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                    </td>
+                    <td>A</td>
+                </tr>
+
+                <tr style="background-color: #ffffff;">
+                    <td style="color: red;">4. Денисов Алексей Анатольевич</td>
+                    <td align="center">
+                        <input type="radio" name="r4" checked value="отс" />
+                        <input type="radio" name="r4" value="был" />
+                        <input type="radio" name="r4" value="опоздал" />
+                    </td>
+                    <td align="center"><input type="text"
+                            style="height: 10px; width: 280px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                    </td>
+                    <td align="center"><input type="text"
+                            style="height: 10px; width: 50px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                    </td>
+                    <td>A</td>
+                </tr>
+
+                <tr style="background-color: #e0f0ff;">
+                    <td style="color: black;">5. Ермолина Анна Николаевна</td>
+                    <td align="center">
+                        <input type="radio" name="r5" checked value="отс" />
+                        <input type="radio" name="r5" value="был" />
+                        <input type="radio" name="r5" value="опоздал" />
+                    </td>
+                    <td align="center"><input type="text"
+                            style="height: 10px; width: 280px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                    </td>
+                    <td align="center"><input type="text"
+                            style="height: 10px; width: 50px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                    </td>
+                    <td>A</td>
+                </tr>
+
+                <tr style="background-color: #ffffff;">
+                    <td style="color: black;">6. Костаев Александр Аркадиевич</td>
+                    <td align="center">
+                        <input type="radio" name="r6" checked value="отс" />
+                        <input type="radio" name="r6" value="был" />
+                        <input type="radio" name="r6" value="опоздал" />
+                    </td>
+                    <td align="center"><input type="text"
+                            style="height: 10px; width: 280px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                    </td>
+                    <td align="center"><input type="text"
+                            style="height: 10px; width: 50px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                    </td>
+                    <td>A</td>
+                </tr>
+
+                <tr style="background-color: #e0f0ff;">
+                    <td style="color: black;">7. Мальцев Михаил Сергеевич</td>
+                    <td align="center">
+                        <input type="radio" name="r7" checked value="отс" />
+                        <input type="radio" name="r7" value="был" />
+                        <input type="radio" name="r7" value="опоздал" />
+                    </td>
+                    <td align="center"><input type="text"
+                            style="height: 10px; width: 280px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                    </td>
+                    <td align="center"><input type="text"
+                            style="height: 10px; width: 50px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                    </td>
+                    <td>A</td>
+                </tr>
+
+                <tr style="background-color: #ffffff;">
+                    <td>8. Новиков Владислав Русланович</td>
+                    <td align="center">
+                        <input type="radio" name="r8" checked value="отс" />
+                        <input type="radio" name="r8" value="был" />
+                        <input type="radio" name="r8" value="опоздал" />
+                    </td>
+                    <td align="center"><input type="text"
+                            style="height: 10px; width: 280px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                    </td>
+                    <td align="center"><input type="text"
+                            style="height: 10px; width: 50px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                    </td>
+                    <td>A</td>
+                </tr>
+
+                <tr style="background-color: #e0f0ff;">
+                    <td style="color: red;">9. Ручка Анатолий Олегович</td>
+                    <td align="center">
+                        <input type="radio" name="r9" checked value="отс" />
+                        <input type="radio" name="r9" value="был" />
+                        <input type="radio" name="r9" value="опоздал" />
+                    </td>
+                    <td align="center"><input type="text"
+                            style="height: 10px; width: 280px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                    </td>
+                    <td align="center"><input type="text"
+                            style="height: 10px; width: 50px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                    </td>
+                    <td>A</td>
+                </tr>
+
+                <tr style="background-color: #ffffff;">
+                    <td style="color: black;">10. Терешко Артем Вячеславович</td>
+                    <td align="center">
+                        <input type="radio" name="r10" checked value="отс" />
+                        <input type="radio" name="r10" value="был" />
+                        <input type="radio" name="r10" value="опоздал" />
+                    </td>
+                    <td align="center"><input type="text"
+                            style="height: 10px; width: 280px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                    </td>
+                    <td align="center"><input type="text"
+                            style="height: 10px; width: 50px; background-color: #ebe9ed; border-style: groove; border-color: white;" />
+                    </td>
+                    <td>A</td>
+                </tr>
+
+            </table>
+            <label style="font-style: italic; color: red; font-size: 11px;">Не было ленты</label>
+            <label style="margin-left: 300px; font-size: 11px; font-weight: bold; color: #686498">Отметить
+                всех</label>
+        </div>
+    </div>
+
+</body>
+
+</html>

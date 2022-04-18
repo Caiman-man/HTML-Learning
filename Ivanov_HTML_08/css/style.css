@@ -1,0 +1,365 @@
+/*обратимся ко всем элементам, чтобы убрать отступы, которые назначит браузер по умолчанию*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*для основного контейнера будем использовать фиксировано-резиновую верстку*/
+.container {
+  /*устанавливаем основную ширину равной ширине видимой части окна браузера*/
+  width: 100vw;
+  /*устанавливаем минимальную ширину, до которой можно сжимать контейнер, если ширина устройства будет меньше - появится горизонтальный скролл*/
+  min-width: 370px;
+  /*устанавливаем максимальную ширину, до которой можно расширять контейнер, если ширина устройства будет больше - по бокам появятся отступы*/
+  max-width: 1920px;
+  /*для того, чтобы контейнер находился всегда по центру по горизонтали указываем значения для внешних отступов*/
+  margin: auto;
+  /*в случае, если контента будет мало, чтобы страница полностью заполнила всю высоту окна браузера, устанавливаем минимальную высоту*/
+  min-height: 100vh;
+  /*в случае, если контента будет много, чтобы появился вертикальный скролл, устанавливаем значение высоты равной содержимому*/
+  height: auto;
+  /*для более простого расположения элементов на странице, воспользуемся технологией flexBox*/
+  display: flex;
+  /*направление основной оси меняем на вертикальное*/
+  flex-direction: column;
+}
+
+/*запрос для экранов с максимальной шириной 960px и меньше*/
+@media screen and (max-width: 960px) {
+  main > section + aside {
+    /*спрячем правый элемент на всех устройствах, с шириной 960px и меньше*/
+    display: none;
+  }
+  main > aside {
+    /*зададим размер левой части по основной оси в процентах*/
+    flex-basis: 30%;
+  }
+  main > section {
+    /*зададим размер центральной части по основной оси в процентах*/
+    flex-basis: 70%;
+  }
+}
+
+/*запрос для экранов с максимальной шириной 570px и меньше*/
+@media screen and (max-width: 570px) {
+  main {
+    /*меняем направление основной оси элемента отображающего основной контент*/
+    flex-direction: column;
+  }
+  main > aside {
+    /*зададим размер видимому элементу aside по основной оси*/
+    flex-basis: 20vh;
+  }
+  main > section {
+    /*зададим размер основному контенту по основной оси*/
+    flex-basis: auto;
+    /*изменим порядок отображения элементов так, чтобы контент находился выше*/
+    order: -1;
+  }
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: black;
+  height: 22px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.header_names {
+  color: white;
+  font-size: 10px;
+  font-weight: 400;
+  font-family: Arial narrow;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 3px;
+  align-self: center;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+.header_names:hover {
+  color: grey;
+  font-size: 10px;
+  font-weight: 500;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+main {
+  /*чтобы заполнять все пространство по основной оси основным элементом прописываем свойство flex */
+  display: flex;
+  flex: 1 1 auto;
+}
+.left_aside {
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  flex-basis: 29%;
+}
+section {
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  flex: 1 1 auto;
+  /* flex-basis: 80%; */
+}
+div.section1 {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+div.section2 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+img.section1_img {
+  width: 100%;
+  transition-duration: 0.1s;
+  transition-timing-function: ease;
+}
+img.section1_img:hover {
+  opacity: 70%;
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+  transition-duration: 0.1s;
+  transition-timing-function: ease;
+}
+img.section2_img {
+  width: 48%;
+  transition-duration: 0.1s;
+  transition-timing-function: ease;
+}
+img.section2_img:hover {
+  opacity: 70%;
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+  transition-duration: 0.1s;
+  transition-timing-function: ease;
+}
+.right_aside {
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  flex-basis: 40%;
+}
+.titles {
+  color: black;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: Arial narrow;
+  text-decoration: none;
+}
+
+/* club names for all matches*/
+.all_matches_club_names {
+  color: #6f6f6f;
+  font-size: 8px;
+  font-weight: 600;
+  font-family: Arial narrow;
+}
+.all_matches_club_countries {
+  color: #a1a1a1;
+  font-size: 8px;
+  font-weight: 600;
+  font-family: Arial narrow;
+  padding-left: 5px;
+}
+.all_matches_club_logo {
+  align-self: center;
+  width: 24px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* all matches */
+.all_matches {
+  background-color: white;
+  margin-top: 15px;
+}
+div.all_matches_logo_base {
+  background-image: url(.Images/futsal_logo2.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+.all_matches_logo {
+  width: 60px;
+}
+.date_slot {
+  color: #6f6f6f;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: Arial narrow;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+.current_match {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.left_match {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-right: 20px;
+  flex-basis: 45%;
+}
+.score {
+  color: black;
+  font-size: 10px;
+  font-weight: 600;
+  font-family: Arial narrow;
+  justify-self: center;
+  position: absolute;
+}
+.right_match {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 20px;
+  flex-basis: 45%;
+}
+
+/* club names for rankings*/
+.rankings_club_names {
+  color: black;
+  font-size: 9px;
+  font-weight: 700;
+  font-family: Arial narrow;
+}
+.rankings_club_countries {
+  color: #a1a1a1;
+  font-size: 8px;
+  font-weight: 600;
+  font-family: Arial narrow;
+  padding-left: 5px;
+}
+.rankings_club_logo {
+  align-self: center;
+  width: 15px;
+  padding-right: 5px;
+}
+.rankings_club_coefficient {
+  color: black;
+  font-size: 9px;
+  font-weight: 700;
+  font-family: Arial narrow;
+  margin-left: auto;
+}
+
+/* club rankings */
+.club_rankings {
+  background-color: white;
+  margin-top: 15px;
+}
+.current_club_ranking {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.club_coefficients {
+  color: #6f6f6f;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: Arial narrow;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.full_standings {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: 1px solid #4baff0;
+  border-radius: 3%;
+  color: #4baff0;
+  font-size: 9px;
+  font-weight: 700;
+  font-family: Arial narrow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+.full_standings:hover {
+  background-color: #009fe3;
+  color: white;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
+/* ball animation */
+.ball {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  animation: bounce 3s linear infinite, move 25s linear infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    bottom: 100%;
+    opacity: 10%;
+  }
+  25% {
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+  }
+  30% {
+    bottom: 0;
+    width: 50px;
+    height: 20px;
+  }
+  35% {
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    opacity: 100%;
+  }
+  50% {
+    bottom: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  70% {
+    bottom: 100%;
+  }
+  100% {
+    bottom: 100%;
+    opacity: 10%;
+  }
+}
+
+@keyframes move {
+  from {
+    left: 0;
+  }
+  to {
+    left: 95%;
+  }
+}
